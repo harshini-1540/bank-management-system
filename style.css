@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(-45deg, #74ebd5, #acb6e5, #6c63ff, #ff9a9e);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+}
+
+
+.container {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 320px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  border: 2px solid #6c63ff;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.6);
+  transform: scale(1.03);
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.deposit {
+  background: linear-gradient(45deg, #00c853, #69f0ae);
+  color: white;
+}
+
+.withdraw {
+  background: linear-gradient(45deg, #ff1744, #ff8a80);
+  color: white;
+}
+
+.deposit:hover {
+  box-shadow: 0 0 15px #00c853;
+}
+
+.withdraw:hover {
+  box-shadow: 0 0 15px #ff1744;
+}
+
+.result {
+  background: #f0f8ff;
+}
+
+.details {
+  margin-top: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.details p:last-child {
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+  animation: pulse 1.5s infinite;
+}
+
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+h1 {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff;
+  }
+  to {
+    text-shadow: 0 0 20px #6c63ff;
+  }
+}
